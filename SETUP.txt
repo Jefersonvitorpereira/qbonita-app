@@ -1,0 +1,31 @@
+QBonita — estrutura do projeto
+=============================
+
+Pastas
+------
+- frontend/     → aplicativo Flutter (rode `flutter pub get` e `flutter run` aqui)
+- backend/      → API Spring Boot + Maven (`mvn spring-boot:run`)
+- database/     → MySQL via Docker + script `init.sql` (banco, tabelas, dados de teste)
+
+Fluxo rápido para testar
+-------------------------
+1) Banco de dados  
+   cd database  
+   docker compose up -d  
+   Aplique o script (cria tabelas e dados):  
+   mysql -h 127.0.0.1 -P 3306 -u root -proot < init.sql  
+   (No PowerShell: `Get-Content .\init.sql | mysql -h 127.0.0.1 -P 3306 -u root -proot`)
+
+2) API  
+   cd ..\backend  
+   mvn spring-boot:run  
+
+3) App  
+   cd ..\frontend  
+   (primeira vez: flutter create . --project-name qbonita_app)  
+   flutter pub get  
+   flutter run  
+
+Login admin no app: **admin** / **admin** (criado pelo `database/init.sql`).
+
+Mais detalhes: `database\README.txt` e `backend\README.txt`.

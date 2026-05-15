@@ -1,0 +1,24 @@
+# Raiz do monorepo QBonita
+
+# Flutter (pasta frontend)
+frontend/.dart_tool/
+frontend/build/
+frontend/.flutter-plugins
+frontend/.flutter-plugins-dependencies
+
+# Backend Java
+backend/target/
+
+# IDE
+.idea/
+*.iml
+.vscode/
+
+# Android / iOS (gerados pelo flutter create dentro de frontend)
+**/local.properties
+**/.gradle/
+**/Pods/
+**/DerivedData/
+
+*.log
+.DS_Store
