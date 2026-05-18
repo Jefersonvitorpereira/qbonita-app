@@ -250,7 +250,7 @@ class _ProductFormPageState extends State<ProductFormPage> {
             ),
             const SizedBox(height: 16),
             DropdownButtonFormField<int>(
-              value: _categoriaId,
+              // value: _categoriaId,
               decoration: const InputDecoration(labelText: 'Categoria'),
               items: _categorias
                   .map(

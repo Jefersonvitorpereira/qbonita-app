@@ -27,6 +27,7 @@ class AppConfig {
     if (Platform.isAndroid) {
       // Emulador Android → host da máquina
       // return 'http://10.0.2.2:8080';
+      // return 'http://172.20.10.6:8080';
       return 'http://192.168.1.23:8080';
     }
     return 'http://localhost:8080';
